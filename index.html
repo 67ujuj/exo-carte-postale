@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Sélection d'image :</h1>
+    <input type="radio" name="image" value="image1.jpg" id="image1" checked />
+    <label for="image1">Image 1</label>
+    <input type="radio" name="image" value="image2.jpg" id="image2" />
+    <label for="image2">Image 2</label>
+    <input type="radio" name="image" value="image3.jpg" id="image3" />
+    <label for="image3">Image 3</label>
+    <br /><br />
+    <img
+      src="/assets/img/campagne.jpg"
+      id="selected-image"
+      alt="Image sélectionnée"
+    />
+    <script src="assets/js/script.js"></script>
+  </body>
+  <body>
+    <div id="TitreetTexte">
+    <h1>Ajout du texte interactif :</h1>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#inText").on("input", function(){
+          $("#output").text($(this).val());
+        });
+      });
+    </script>
+    <p><input type="text" placeholder="Entrez votre texte ici" id="inText"></p>
+    <div id="output"></div>
+    <h1>Ajout du titre interactif :</h1>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#inText").on("input", function(){
+          $("#output").text($(this).val());
+        });
+      });
+    </script>
+
+  <body>
+    <p><input type="text" placeholder="Entrez votre texte ici" id="inText"></p>
+    <div id="output"></div>
+  </div>
+    <h1>Sélecteur de couleur :</h1>
+    <input type="color" id="color-picker" value="#000000">
+    
+    <script>
+      // Récupération de l'élément input
+      const colorPicker = document.querySelector('#color-picker');
+
+      // Ajout d'un événement "input" sur l'élément input
+      colorPicker.addEventListener('input', function() {
+        // On récupère la valeur de la couleur sélectionnée
+        const selectedColor = this.value;
+        
+        // On utilise la couleur sélectionnée
+        console.log('Couleur sélectionnée : ' + selectedColor);
+        // Ici, vous pouvez faire ce que vous voulez avec la couleur sélectionnée
+      });
+    </script>
+    <h1>Sélecteur de police d'écriture :</h1>
+    <select id="font-selector">
+      <option value="Arial">Arial</option>
+      <option value="Verdana">Verdana</option>
+      <option value="Helvetica">Helvetica</option>
+      <option value="Times New Roman">Times New Roman</option>
+      <option value="Courier New">Courier New</option>
+    </select>
+    <br><br>
+    <p id="sample-text">Exemple de texte</p>
+    
+    <script>
+      // Récupération de l'élément select et du paragraphe de texte
+      const fontSelector = document.querySelector('#font-selector');
+      const sampleText = document.querySelector('#sample-text');
+
+      // Ajout d'un événement "change" sur l'élément select
+      fontSelector.addEventListener('change', function() {
+        // On récupère la police d'écriture sélectionnée
+        const selectedFont = this.value;
+        
+        // On utilise la police d'écriture sélectionnée
+        sampleText.style.fontFamily = selectedFont;
+      });
+    </script>
+    <h1>Bouton d'impression :</h1>
+    <button id="print-button">Imprimer la page</button>
+    
+    <script>
+      // Récupération de l'élément bouton
+      const printButton = document.querySelector('#print-button');
+
+      // Ajout d'un événement "click" sur l'élément bouton
+      printButton.addEventListener('click', function() {
+        // Appel de la méthode print() pour imprimer la page
+        window.print();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+*{
+    font-family: Fredoka;
+}
+#inText{
+    width: 280px;
+    height: 150px;
+    border-radius: 16px;
+    text-align: center;
+}
+#TitreetTexte{
+    display: flex;
+    justify-content: space-evenly;
+}
